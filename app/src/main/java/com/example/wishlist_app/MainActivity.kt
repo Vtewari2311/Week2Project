@@ -43,5 +43,6 @@ class MainActivity : AppCompatActivity() {
         //override fun onItemClick(View: view, Int: position) {
         //Toast.makeText(this, "You clicked " + adapter.getItem(position) + " on row number " + position, Toast.LENGTH_SHORT).show();
         //}
+        adapter.notifyDataSetChanged()
     }
 }
