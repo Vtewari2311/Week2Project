@@ -27,8 +27,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src![Week2Project](https://user-images.githubusercontent.com/74680679/191171874-11e55287-ce9c-45ed-881a-07c7d1c22cc6.gif)
-= />
+<img src![Week2Project](https://user-images.githubusercontent.com/74680679/191171874-11e55287-ce9c-45ed-881a-07c7d1c22cc6.gif)>
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with ...  
