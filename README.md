@@ -4,7 +4,7 @@ Submitted by: **Your Name Here**
 
 **Name of your app** is a wishlist app that helps the user keep track of what they want to buy.
 
-Time spent: **7** hours spent in total
+Time spent: **X** hours spent in total
 
 ## Required Features
 
@@ -27,7 +27,15 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<[Week2Project](https://user-images.githubusercontent.com/74680679/191171874-11e55287-ce9c-45ed-881a-07c7d1c22cc6.gif)>
+<img src='![Week2Project](https://user-images.githubusercontent.com/74680679/191172652-0b4d1821-afa0-42cc-9e06-0f60dc1a469d.gif)
+' alt='Video Walkthrough' />
+
+<!-- Replace this with whatever GIF tool you used! -->
+GIF created with ...  
+<!-- Recommended tools:
+[Kap](https://getkap.co/) for macOS
+[ScreenToGif](https://www.screentogif.com/) for Windows
+[peek](https://github.com/phw/peek) for Linux. -->
 
 ## Notes
 
@@ -35,7 +43,7 @@ Describe any challenges encountered while building the app.
 
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright [2022] [Vedant Tewari]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
