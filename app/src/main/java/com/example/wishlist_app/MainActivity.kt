@@ -1,51 +1,47 @@
 package com.example.wishlist_app
 
-import androidx.appcompat.app.AppCompatActivity
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-import android.content.Intent;
-import org.apache.commons.io.FileUtils;
-
-import android.util.Log;
-import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.Toast;
-
-
-import java.io.File;
-import java.io.IOException;
-import java.nio.charset.Charset;
-import java.util.ArrayList;
-import java.util.List;
+import android.content.ClipData
 import android.os.Bundle
+import android.widget.Button
+import android.widget.EditText
+import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import java.util.List
+
 
 class MainActivity : AppCompatActivity() {
-    var mItem: List<ClipData.Item>
-    var myWishes: ArrayList<Wish>
+    //var adapter: MyRecyclerViewAdapter? = null
+    lateinit var items: List<ClipData.Item>
+    lateinit var myWishes: ArrayList<Wish>
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        
-        val subButton = findViewById<Button>(R.id.button)
-        val nameInput = findViewById<EditText>(R.id.Item)
-        val siteInput = findViewById<EditText>(R.id.URL)
-        val priceInput = findViewById<EditText>(R.id.Price)
-        
-        val name = nameInput.text.toString()
-        val url = siteInput.text.toString()
-        val price = priceInput.text.toString()
+
+        val submitButton= findViewById<Button>(R.id.Button)
+        val item = findViewById<EditText>(R.id.item)
+        val url = findViewById<EditText>(R.id.url)
+        val price = findViewById<EditText>(R.id.price)
+
+        val userItem = item.text.toString()
+        val userPrice = url.text.toString()
+        val userURL = price.text.toString()
         
         myWishes = ArrayList()
-        subButton.setOnClickListener {
-            myWishes.add(Wish(name, url, price))
+        submitButton.setOnClickListener {
+            myWishes.add(Wish(userItem, userPrice, userURL))
         }
-        
-        val wishList = findViewById<RecyclerView>(R.id.itemRV)
-        
-        val adapter = ItemAdapter(myWishes)
-        
-        wishList.adapter = adapter
-        wishList.layoutManager = LinearLayoutManager(this)
+        // Lookup the RecycleViewer in activity layout
+        val recycleViewer = findViewById<RecyclerView>(R.id.itemRV)
+        // Create adapter passing in the list of items
+        val adapter = MyRecyclerViewAdapter(myWishes)
+        // Attach the adapter to the RecycleViewer to populate items
+        recycleViewer.adapter = adapter
+        // Set layout manager to position the items
+        recycleViewer.layoutManager = LinearLayoutManager(this)
+
+        //override fun onItemClick(View: view, Int: position) {
+        //Toast.makeText(this, "You clicked " + adapter.getItem(position) + " on row number " + position, Toast.LENGTH_SHORT).show();
+        //}
     }
 }
